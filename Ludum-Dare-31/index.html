@@ -3,10 +3,10 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Unity Web Player | One Screen</title>
-		<script type='text/javascript' src='jquery.min.js'></script>
+		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
 		<script type="text/javascript">
 		<!--
-		var unityObjectUrl = "UnityObject2.js";
+		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
 		if (document.location.protocol == 'https:')
 			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
 		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
@@ -18,7 +18,7 @@
 				width: 1000, 
 				height: 800,
 				params: { enableDebugging:"0" }
-				,baseDownloadUrl: "http://webplayer.unity3d.com/download_webplayer-3.x/"
+				
 			};
 			var u = new UnityObject2(config);
 
@@ -56,7 +56,7 @@
 						break;
 					}
 				});
-				u.initPlugin(jQuery("#unityPlayer")[0], "0.01.unity3d");
+				u.initPlugin(jQuery("#unityPlayer")[0], "0.02.unity3d");
 			});
 		-->
 		</script>
@@ -117,7 +117,6 @@
 	</head>
 	<body>
 		<p class="header"><span>Unity Web Player | </span>One Screen</p>
-		<p style="color: #c00; font-size: small; font-style: italic;">Built with beta version of Unity. Will only work on your computer!</p>
 		<div class="content">
 			<div id="unityPlayer">
 				<div class="missing">
